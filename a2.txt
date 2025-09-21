@@ -1,1 +1,4 @@
 Listo a2
+
+estuve untracked mucho tiempo
+ahora estoy staged
