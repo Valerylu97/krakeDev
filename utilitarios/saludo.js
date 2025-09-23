@@ -13,6 +13,11 @@ saludar=function(){
 
     //mostrar el mensaje en el div llamado "divSaludo"
     mostrarTexto("lblMensaje", mensaje);
+
+    let rutaImagen = "../utilitarios/imagenes/gif-para-saludar.gif";
+    mostrarImagen("idImagen", rutaImagen);
+
+    mostrarTextoEnCaja("txtNombre", "");
 }
 
 recuperarTexto = function(idComponente){
@@ -36,4 +41,14 @@ recuperarFloat = function(idComponente){
 mostrarTexto = function(idComponente, mensaje){
     let componente = document.getElementById(idComponente);
     componente.innerText = mensaje;
+}
+
+mostrarImagen = function(idComponente, rutaImagen){
+    let componente = document.getElementById(idComponente);
+    componente.src = rutaImagen;
+}
+
+mostrarTextoEnCaja = function(idComponente, mensaje){
+    let componente = document.getElementById(idComponente);
+    componente.value = mensaje;
 }
