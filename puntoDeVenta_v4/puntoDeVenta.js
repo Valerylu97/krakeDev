@@ -95,14 +95,15 @@ calcularValorTotal = function () {
        */
     mostrarTexto("lblTotal", valorTotal);
 
-    //12. Mostrar un resumen en el componente lblResumen, si no existe debe agregarlo
+    //13. Mostrar un resumen en el componente lblResumen, si no existe debe agregarlo
     /*
         Ejemplo: 
             Valor a pagar por 20 cerveza corona con 10% de descuento: USD 48.75
         Si funciona, hacer un commit
     */
-
+    mostrarTexto("lblResumen", "Valor a pagar por " + cantidad + " " + nombreProducto + " con " + porcentajeDescuento + "% de descuento: USD " + valorTotal);
 }
+
 limpiar = function () {
     /*
         Dejar todas las cajas de texto con el valor cadena vacía, 0 ó 0.0 según el tipo de dato
