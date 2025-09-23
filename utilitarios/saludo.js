@@ -7,8 +7,12 @@ saludar=function(){
     let edadIngresada = recuperarInt("txtEdad");    
     //recuperar el valor de la caja de texto txtEstatura
     let estaturaIngresada = recuperarFloat("txtEstatura");
-    //mostrar un mensaje de saludo
-    alert("Hola " + nombreIngresado + " " + apellidoIngresado + ", bienvenido a KrakeDev");
+    
+    //mensaje
+    let mensaje = "Hola " + nombreIngresado + " " + apellidoIngresado + ", bienvenido a KrakeDev. Veo que tienes " + edadIngresada + " años y mides " + estaturaIngresada + " metros.";
+
+    //mostrar el mensaje en el div llamado "divSaludo"
+    mostrarTexto("lblMensaje", mensaje);
 }
 
 recuperarTexto = function(idComponente){
@@ -27,4 +31,9 @@ recuperarFloat = function(idComponente){
     let componente = recuperarTexto(idComponente);
     let valorFloat = parseFloat(componente);
     return valorFloat;
+}
+
+mostrarTexto = function(idComponente, mensaje){
+    let componente = document.getElementById(idComponente);
+    componente.innerText = mensaje;
 }
