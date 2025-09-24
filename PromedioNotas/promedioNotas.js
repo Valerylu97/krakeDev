@@ -5,4 +5,10 @@ calcularPromedioNotas = function(){
 
     let promedio = calcularPromedio(nota1,nota2,nota3);
     mostrarTexto("lblResultado", promedio);
+
+    if(promedio>=7 && promedio<=10){
+        mostrarImagen("imgResultado", "exito.gif");
+    }else{
+        mostrarImagen("imgResultado", "error.gif");
+    }
 }
