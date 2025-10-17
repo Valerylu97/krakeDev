@@ -136,8 +136,71 @@ obtenerProvincia = function(placa){
         case "Y":
             provincia = "Santa Elena";
             break;
+        case "J":
+            provincia = "Santo Domingo de los Tsáchilas";
+            break;
         default:
             provincia = null;
     }
     return provincia;
+}
+
+obtenerTipoVehiculo = function(placa){
+    let tipoVehiculo = "";
+    let segundoCaracter = placa.charAt(1);
+
+    switch(segundoCaracter){
+        case "A": //A
+            tipoVehiculo = "Vehículos comerciales";
+            break;
+        case "Z": //Z
+            tipoVehiculo = "Vehículos comerciales";
+            break;
+        case "E": //E
+            tipoVehiculo = "Vehículos gubernamentales";
+            break;
+        case "X": //X
+            tipoVehiculo = "Vehículos de uso oficial";
+            break;
+        case "S": //S
+            tipoVehiculo = "Vehículos de gobierno provincial";
+            break;
+        case "M": //M
+            tipoVehiculo = "Vehículos municipales";
+            break;
+        default:
+            tipoVehiculo = "Vehículos particulares";
+    }
+    return tipoVehiculo;
+}
+
+obtenerDiaPicoYPlaca = function(placa){
+    let dia = "";
+    let ultimoDigito = placa.charAt(placa.length - 1);
+
+    switch(ultimoDigito){
+        case "1":
+        case "2":
+            dia = "Lunes";
+            break;
+        case "3":
+        case "4":
+            dia = "Martes";
+            break;
+        case "5":
+        case "6":
+            dia = "Miércoles";
+            break;
+        case "7":
+        case "8":
+            dia = "Jueves";
+            break;
+        case "9":
+        case "0":
+            dia = "Viernes";
+            break;
+        default:
+            dia = null;
+    }
+    return dia;
 }
