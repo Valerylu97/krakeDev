@@ -38,3 +38,12 @@ validarPlaca = function(){
         mostrarMensaje("lblTipoVehiculo", "INCORRECTO");
     }
 }
+
+limpiarPlaca = function(){
+    document.getElementById("placa").value = "";
+    mostrarMensaje("lblResultado", "");
+    mostrarMensaje("lblError", "");
+    mostrarMensaje("lblProvincia", "");
+    mostrarMensaje("lblTipoVehiculo", "");
+    mostrarMensaje("lblDiaPicoYPlaca", "");
+}

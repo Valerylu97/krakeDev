@@ -89,8 +89,9 @@ body{
 }
 .contenedorBoton{
     display: flex;
-    flex:1;
+    padding: 10px;
     justify-content: center;
+    align-items: center;
 }
 .areaResultado{
     display: flex;
