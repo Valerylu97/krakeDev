@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <script src="juego.js"></script>
+        <script src="serviciosJuego.js"></script>
+        <script src="utilitarios.js"></script>
+        <link rel="stylesheet" href="juego.css">
+    </head>
+    <body>
+        <div class="principal">            
+            <div class="contenido">
+                <!--Titulo!-->
+                <div class="titulo">
+                    JUEGA PIEDRA, PAPEL O TIJERA
+                </div>
+
+                <!--Tres opciones de juego-->
+                <div class="imagenOpciones">
+                    <input type="image" src="./imagenes/piedra.png" width="10%" onclick="jugar('piedra')">
+                    <input type="image" src="./imagenes/papel.png" width="10%" onclick="jugar('papel')">
+                    <input type="image" src="./imagenes/tijera.png" width="10%" onclick="jugar('tijera')">
+                </div>
+            </div>
+
+            <div class="areaResultado"> 
+                <!--Opcion seleccionada-->
+                <div class="opcionSeleccionada">
+                    <div>
+                        Opcion seleccionada:    
+                    </div>
+
+                    <div class="imagenSeleccion" id="imagenSeleccion">
+                        <!--Imagen seleccionada por el usuario-->
+                        <img src="" width="100px" id="imgSeleccion"/>
+                    </div>
+                </div>
+
+                <!--Resultado del juego-->
+                <div class="resultadoJuego" id="lblResultado">
+                    <!--Resultado del juego-->
+                </div>
+        
+                <div class="botones">
+                    <div class="contenedorBoton">
+                        <input type="button" value="NUEVA PARTIDA" class="estiloBoton" onclick="limpiar()">
+                    </div>
+                </div>
+            </div>
+
+            <!--Puntuación-->
+            <div class="puntuacion">
+                <div id="puntosUsuario">
+                    Puntos Usuario:
+                    <span id="lblPuntosUsuario"></span>
+                </div>
+
+                <div id="puntosComputadora">
+                    Puntos Computadora: 
+                    <span id="lblPuntosComputadora"></span>
+                </div>
+
+                <!--Resumen del juego-->
+                <div id="lblResumen"></div>
+            </div>
+        </div>
+    </body>
+</html>
