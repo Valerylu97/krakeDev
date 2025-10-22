@@ -35,4 +35,17 @@ recuperarFloat = function(idComponente){
     return valorFlotante;
  }
 
+ esMayuscula = function(caracter){
+    let esMayuscula = false;
+    caracter = caracter.charCodeAt(0);
+
+    if(caracter >= 65 && caracter <= 90){
+        esMayuscula = true;
+    }
+    else{
+        esMayuscula = false;
+    }
+    return esMayuscula;
+}
+
 

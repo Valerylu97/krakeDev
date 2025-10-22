@@ -14,7 +14,7 @@ recorrerCadena = function(cadena){
 }
 ejecutarPrueba2 = function(){
     let cadena = recuperarTexto("txtCadena");
-    let cadenaInvertida =invertirCadena(cadena);
+    let cadenaInvertida = invertirCadena(cadena);
     mostrarTexto("lblCadenaInvertida",cadenaInvertida);
 }
 invertirCadena = function(cadena){
@@ -25,4 +25,31 @@ invertirCadena = function(cadena){
         cadenaInvertida = cadenaInvertida + caracter;
     }
     return cadenaInvertida;
+}
+buscarLetra = function(cadena, letra){
+    let caracter;
+    let existeLetra=false;
+    for(let i=0;i<cadena.length;i++){
+        caracter = cadena.charAt(i);
+        if(caracter === letra){
+            existeLetra=true;
+        }
+    }
+    if(existeLetra==true){
+        console.log("existe");
+    }
+    else{
+        console.log("no existe");
+    }
+}
+contarMayuscula = function(cadena){
+    let letra;
+    let contador=0;
+    for(let i=0;i<cadena.length;i++){
+        letra = cadena.charAt(i);
+        if(esMayuscula(letra)){
+            contador+=1;
+        }
+    }
+    console.log("Hay "+contador+" letras mayusculas");
 }
