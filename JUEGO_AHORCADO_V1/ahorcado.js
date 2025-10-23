@@ -1,4 +1,6 @@
 //No se olvide de respirar, mantenga la calma y demuestre lo que sabe
+let palabraSecreta; 
+
 esMayuscula = function(caracter){
     let esMayuscula = false;
     let letra = caracter.charCodeAt(0);
@@ -15,7 +17,6 @@ guardarPalabra = function(){
     let palabra = recuperarTexto("pswSecreta");
     let contador = 0;
     let esValido = false;
-    let palabraSecreta;
     if(palabra.length == 5){
         for(let i=0;i<5;i++){
             if(esMayuscula(palabra.charAt(i))){
@@ -47,5 +48,15 @@ mostrarLetra = function(letra, posicion){
     }
     if(posicion == 4){
         mostrarTexto("div4", letra);
+    }
+}
+
+validar = function(letra){
+    let letrasEncontradas;
+    for(let i=0;i<palabraSecreta.length;i++){
+        if(letra == palabraSecreta.charAt(i)){
+            mostrarLetra(letra, i);
+            letrasEncontradas += 1;
+        }
     }
 }
