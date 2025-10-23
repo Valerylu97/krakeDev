@@ -31,9 +31,10 @@ guardarPalabra = function(){
             palabraSecreta = palabra;
             console.log(palabraSecreta);
         }
-    }else{
-        alert("DEBE INGRESAR UNA PALABRA DE 5 LETRAS MAYUSCULAS")
-    }   
+        else{
+            alert("DEBE INGRESAR UNA PALABRA DE 5 LETRAS MAYUSCULAS")
+        } 
+    }  
 }
 
 mostrarLetra = function(letra, posicion){
@@ -76,10 +77,10 @@ ingresarLetra = function(){
     if(esMayuscula(letra)){
         validar(letra);
         if(coincidencias == 5){
-            alert("HA GANADO");
+            mostrarImagen("ahorcadoImagen", "./ganador.gif");
         }
         if(intentos == 10){
-            alert("HA PERDIDO");
+            mostrarImagen("ahorcadoImagen", "./gameOver.gif");
         }
     }
     else{
