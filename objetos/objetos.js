@@ -13,6 +13,28 @@ probarAtributos = function(){
     }
 }
 
+modificarAtributos = function(){
+    let cuenta = {
+        numero: "532342423",
+        saldo: 0.0
+    }
+
+    cuenta.saldo = 100;
+    cuenta.saldo+=10;
+    console.log(cuenta.saldo);
+}
+
+crearCliente = function(){
+    let cliente = {
+        cedula: "0401703012",
+        nombre: "Valeria"
+    }
+    let cliente1 = {};
+    cliente1.nombre="Romeo";
+    cliente1.apellido="Salcedo";
+    cliente1.cedula="123123";
+}
+
 crearProducto = function(){
     let producto1 = {
         nombre: "Laptop",
@@ -36,3 +58,44 @@ crearProducto = function(){
         console.log("Ambos productos tienen el mismo stock.");
     }
 }
+
+probarIncrementarSaldo = function(){
+    let cuenta = {
+        numero: "1234567890",
+        saldo: 200.0
+    };
+    incrementarSaldo(cuenta, 150);
+    console.log(cuenta.saldo);
+}
+
+incrementarSaldo = function(cuenta, monto){
+    cuenta.saldo += monto;
+}
+
+probarDeterminarMayor = function(){
+    let persona1 = {
+        nombre: "Ana",
+        edad: 25
+    };
+    let persona2 = {
+        nombre: "Luis",
+        edad: 30
+    };
+    let mayor = determinarMayor(persona1, persona2);
+    if(mayor){
+        console.log("La persona mayor es: " + mayor.nombre);
+    } else {
+        console.log("Ambas personas tienen la misma edad.");
+    } 
+}
+
+determinarMayor = function(persona1, persona2){
+   if(persona1.edad > persona2.edad){
+       return persona1;
+    } else if(persona1.edad < persona2.edad){
+       return persona2;
+    } else {
+       return null;
+    } 
+}
+
